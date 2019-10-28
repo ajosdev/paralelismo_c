@@ -3,6 +3,8 @@
 #include <math.h>
 #include <omp.h>
 
+#define sequencial_time 0.765860120000070
+
 int ehPrimo(long num) {
    long divisor;
 
@@ -26,6 +28,7 @@ int main() {
   long soma;
   int n;
 double start = omp_get_wtime();
+double end = 0;
 
   if (LIMITE_MAX <= 1)
     soma = 0;
@@ -37,7 +40,9 @@ double start = omp_get_wtime();
       soma = soma + contaPrimo;
     }
   }
-printf("time: %.15lf \n", omp_get_wtime()-start);
+end = omp_get_wtime()-start;
+printf("time: %.15lf \n", end);
+printf("speedup: %.15lf \n", sequencial_time/end);
   printf("Número total de primos: %ld\n", soma);
 
   return 0;
