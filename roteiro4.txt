@@ -64,7 +64,7 @@ printf("speedup: %.15lf \n", sequencial_time/end);
 9	2,70E-01	2,65E-01
 10	2,70E-01	2,78E-01
 		
-Media	2,68E-01	2,67E-01
+Media:	2,68E-01	2,67E-01
 
 3.Explique porque o tempo com a seção crítica ficou “bom” (“comparável” ao tempo com a redução). Pense na carga de trabalho que cada thread recebe ao serem divididas as iterações do loop paralelizado.
 
